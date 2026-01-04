@@ -1,34 +1,45 @@
-<!DOCTYPE html>
-<html>
+
 <head>
-    <title>Corner Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
 </head>
-<body>
-    <div class="chat-container">
-        <div class="windowTop">
-            <p>Global_Chat.exe</p>
+<body class="chat-page">
+    <main class="master-container">
+        <div class="windowTop mainHeader">
+            <p>The_Corner_Chat</p>
             <div class="windowCircle">
-               
                 <div class="circle"></div>
                 <div class="circle"></div>
-                 <a href="home.html" style="text-decoration:none;"><div class="circle" style="background:#e60a0a; cursor:pointer;"></div></a>
+                <div class="circle"></div>
             </div>
         </div>
-        
-        <div class="windowContent chatBoxMain">
-            <div id="chatDisplay" class="post chat-display-area">
-                <p class="system-text">Welcome to the Corner. Type a message to start.</p>
-            </div>
 
-            <div class="chat-controls">
-                <input type="text" id="username" placeholder="Handle..." class="chat-input-small">
-                <input type="text" id="message" placeholder="Say something..." class="chat-input-large">
-                <button id="sendBtn" class="loginBtn">SEND</button>
+        <div class="windowContent main-app-body">
+            <div class="app-layout">
+                
+                <aside class="side-panel">
+                    <div class="side-info">
+                        <h2>Active Channel</h2>
+                        <p><b>Status:</b> Online</p>
+                        <p><b>Rules:</b> No spamming.</p>
+                        <hr class="divider">
+                        <img src="image/hornet-hollow-knight.gif" id="blinkies" alt="blinkie">
+                    </div>
+                </aside>
+
+                <section class="chat-area">
+                    <div id="chatDisplay" class="chat-messages post">
+                        <p class="system-text"> Welcome to the Corner.</p>
+                    </div>
+
+                    <div class="chat-footer">
+                        <input type="text" id="username" placeholder="Handle" class="input-name">
+                        <input type="text" id="message" placeholder="Type a message..." class="input-msg">
+                        <button id="sendBtn" class="loginBtn">SEND</button>
+                    </div>
+                </section>
+
             </div>
         </div>
-    </div>
-
+    </main>
     <script src="chat.js"></script>
 </body>
-</html>

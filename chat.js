@@ -10,14 +10,20 @@ function postMessage() {
     if (msg !== "") {
         const newMsg = document.createElement('div');
         newMsg.className = 'msg-bubble';
-        newMsg.innerHTML = `<b>${user}:</b> ${msg}`;
+        
+        // Adding a timestamp makes it look "nicer" and more professional
+        const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+        newMsg.innerHTML = `<small style="opacity:0.5; font-size:0.8rem;">${time}</small><br><b>${user}</b> ${msg}`;
         
         chatDisplay.appendChild(newMsg);
         
-        // Auto-scroll to bottom
-        chatDisplay.scrollTop = chatDisplay.scrollHeight;
+        // Smoother scroll to bottom
+        chatDisplay.scrollTo({
+            top: chatDisplay.scrollHeight,
+            behavior: 'smooth'
+        });
         
-        // Clear input
         messageInput.value = "";
     }
 }
