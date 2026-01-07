@@ -20,7 +20,7 @@ function closeLogin() {
 function checkPassword() {
     const secret = "grub"; // Change this to your password
     if (passInput.value === secret) {
-        window.location.href = "chat.html";
+        window.location.href = "logged.html";
     } else {
         alert("Incorrect password!");
         passInput.value = '';
@@ -48,7 +48,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 // 3. Link listener (Targets the footer link)
-document.querySelector('footer a[href="chat.html"]').addEventListener('click', (e) => {
+document.querySelector('footer a[href="logged.html"]').addEventListener('click', (e) => {
     e.preventDefault(); // Stop it from going to the page immediately
     openLogin();
 });
