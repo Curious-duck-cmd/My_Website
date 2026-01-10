@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Darshan | Image Archive</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <div class="windowTop">
+            <p>Archive_Viewer.exe</p>
+            <div class="windowCircle">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="windowContent">
+            <h1><img src="/image/Map_Pin_Grub.png" style="width:32px; vertical-align: text-bottom;"> Visual History</h1>
+        </div>
+    </header>
+
+    <main class="container" style="justify-content: center;">
+        <section class="content" style="width: 100%; max-width: 1000px;">
+            <div class="windowTop" style="background:#03274B;">
+                <p style="color:#fff;">Stored_Images.bin</p>
+            </div>
+            <div class="windowContent">
+                <div id="imageGrid" class="gallery-grid-only">
+                    <p>Accessing storage units...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/view_gallery.js"></script>
+</body>
+</html> 

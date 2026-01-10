@@ -61,3 +61,4 @@ sendBtn.addEventListener('click', postMessage);
 messageInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') postMessage(); });
 
 loadMessages();
+// Get the logged-in user info

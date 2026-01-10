@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Corner Chat</title>
+    <link rel="stylesheet" href="/chat.css">
+</head>
+<body class="chat-page">
+
+    <main class="master-container">
+        <div class="windowTop mainHeader">
+            <p>The_Corner_Chat</p>
+            <div class="windowCircle">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="windowContent main-app-body">
+            <div class="app-layout">
+                
+                <aside class="side-panel">
+                    <div class="side-info">
+                        <h2>Active Channel</h2>
+                        <p><b>Status:</b> Online</p>
+                        <p><b>Rules:</b> No spamming.</p>
+                        
+                        <hr class="divider">
+
+                        <div id="auth-section" style="text-align: center;">
+                            <button id="loginBtn" class="loginBtn" style="background: #fff; color: #000; font-size: 0.8rem; width: 100%;">
+                                <img src="https://www.google.com/favicon.ico" style="width:14px; vertical-align:middle; margin-right: 5px;"> 
+                                SIGN IN WITH GOOGLE
+                            </button>
+                            
+                            <div id="user-info" style="display:none; margin-top:10px;">
+                                <p style="font-size: 0.9rem;">Logged in as:<br><span id="user-name" style="font-weight: bold;"></span></p>
+                                <button id="logoutBtn" class="loginBtn" style="font-size:10px; margin-top: 5px;">[ LOGOUT ]</button>
+                            </div>
+                        </div>
+
+                        <hr class="divider">
+                        <img src="/image/hornet-hollow-knight.gif" id="blinkies" alt="blinkie" style="max-width: 100%;">
+                    </div>
+                </aside>
+
+                <section class="chat-area">
+                    <div id="chatDisplay" class="chat-messages">
+                        <p class="system-text">Welcome to the Corner.</p>
+                        </div>
+
+                    <div class="chat-footer">
+                        <input type="text" id="username" placeholder="Handle" class="input-name">
+                        <input type="text" id="message" placeholder="Type a message..." class="input-msg">
+                        <button id="sendBtn" class="loginBtn">SEND</button>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
