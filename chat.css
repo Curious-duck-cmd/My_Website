@@ -136,3 +136,48 @@ body {
     margin: 15px 0;
     border: 1px solid #000;
 }
+/* Responsive Mobile View */
+@media (max-width: 768px) {
+    body {
+        padding: 0; /* Remove padding to use full screen */
+        align-items: flex-start; /* Better for long scrolling content */
+    }
+
+    .master-container {
+        height: 100vh; /* Use full height */
+        max-width: 100%;
+        border-radius: 0; /* Optional: remove rounded corners on mobile */
+    }
+
+    .windowTop, .windowContent.main-app-body {
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0; /* Clean edge-to-edge look */
+    }
+
+    .app-layout {
+        flex-direction: column; /* Stack sidebar and chat vertically */
+        overflow-y: auto;
+    }
+
+    .side-panel {
+        width: 100%; /* Sidebar takes full width */
+        border-right: 0;
+        border-bottom: 2px solid #eee;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+
+    .chat-area {
+        height: 400px; /* Give the chat a fixed area so it doesn't vanish */
+        flex-grow: 1;
+    }
+
+    .chat-footer {
+        flex-direction: column; /* Stack input name and message */
+    }
+
+    .input-name {
+        width: 100%; /* Full width name input */
+    }
+}
