@@ -20,7 +20,7 @@ function closeLogin() {
 function checkPassword() {
     const secret = "Hollow grub"; // Change this to your password
     if (passInput.value === secret) {
-        window.location.href = "logged.html";
+        window.location.href = "/html/logged.html";
     } else {
         alert("Incorrect password!");
         passInput.value = '';
