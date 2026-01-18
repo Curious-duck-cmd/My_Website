@@ -1,6 +1,7 @@
-const SUPABASE_URL = process.env.SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_KEY
-const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+// Ensure this file is loaded as type="module"
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 // 2. Elements
 const loginOverlay = document.getElementById('loginOverlay');
@@ -22,7 +23,7 @@ function closeLogin() {
 
 // 4. Secure Validation Logic
 async function checkPassword() {
-    const email = "admin@gmail.com"; // MUST be the email you registered in Supabase
+    const email = "admin1@gmail.com"; // MUST be the email you registered in Supabase
     const password = passInput.value;
 
     if (!password) {
@@ -68,6 +69,14 @@ const footerLink = document.querySelector('footer a[href="logged.html"]') ||
 if (footerLink) {
     footerLink.addEventListener('click', (e) => {
         e.preventDefault(); 
+        openLogin();
+    });
+}
+// Add this to the bottom of your index.js
+const loginLink = document.querySelector('footer a'); // Targets the "LOGIN ?" link
+if (loginLink) {
+    loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
         openLogin();
     });
 }

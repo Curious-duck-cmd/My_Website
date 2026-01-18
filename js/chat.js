@@ -1,8 +1,7 @@
-// 1. Initialize Supabase
-const SUPABASE_URL = process.env.SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_KEY
-const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
+// Ensure this file is loaded as type="module"
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 // DOM Elements
 const chatDisplay = document.getElementById('chatDisplay');

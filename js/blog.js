@@ -1,10 +1,7 @@
-// Add this to the TOP of gallery.js and blog.js
-
-
-// Initialize Supabase (Use your keys here)
-const SUPABASE_URL = process.env.SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_KEY
-const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+// Ensure this file is loaded as type="module"
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 
 const feed = document.getElementById('blogFeed');
