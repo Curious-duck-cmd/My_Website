@@ -1,7 +1,8 @@
 // Ensure Supabase is initialized (using your keys from gallery.js/chat.js)
-const SUPABASE_URL = 'https://bcdadmarkuzavlcwjjhs.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_5qpRTrEY01_irr2ImlcONw_WEqaupbX';
+const SUPABASE_URL = process.env.SUPABASE_URL
+const SUPABASE_KEY = process.env.SUPABASE_KEY
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {

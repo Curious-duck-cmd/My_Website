@@ -2,9 +2,10 @@
 
 
 // Initialize Supabase (Use your keys here)
-const SUPABASE_URL = 'https://bcdadmarkuzavlcwjjhs.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_5qpRTrEY01_irr2ImlcONw_WEqaupbX';
+const SUPABASE_URL = process.env.SUPABASE_URL
+const SUPABASE_KEY = process.env.SUPABASE_KEY
 const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 
 const feed = document.getElementById('blogFeed');
 const publishBtn = document.getElementById('publishBtn');
